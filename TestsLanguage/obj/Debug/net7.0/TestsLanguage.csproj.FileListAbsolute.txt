@@ -1,0 +1,15 @@
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\bin\Debug\net7.0\TestsLanguage.exe
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\bin\Debug\net7.0\TestsLanguage.deps.json
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\bin\Debug\net7.0\TestsLanguage.runtimeconfig.json
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\bin\Debug\net7.0\TestsLanguage.dll
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\bin\Debug\net7.0\TestsLanguage.pdb
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.AssemblyInfo.cs
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.dll
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\refint\TestsLanguage.dll
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.pdb
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\TestsLanguage.genruntimeconfig.cache
+C:\Users\Acer\source\repos\TestsLanguage\TestsLanguage\obj\Debug\net7.0\ref\TestsLanguage.dll
