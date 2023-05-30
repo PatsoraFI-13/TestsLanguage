@@ -1,21 +1,22 @@
-﻿using System.Collections.Generic;
 using NUnit.Framework;
 
 [TestFixture]
 public class MemoryLeakTests
 {
-    private List<int> leakedList;
+    private WeakReference leakedListReference;
 
     [SetUp]
     public void SetUp()
     {
-        leakedList = new List<int>();
+        leakedListReference = new WeakReference(new List<int>());
     }
 
     [TearDown]
     public void TearDown()
     {
-        leakedList = null;
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+        GC.Collect();
     }
 
     [Test]
@@ -23,10 +24,23 @@ public class MemoryLeakTests
     {
         for (int i = 0; i < 1000000; i++)
         {
-            leakedList.Add(i);
+            leakedListReference.Target = new List<int>();
         }
 
-        // Тут не відбувається очищення пам'яті leakedList,
-        // тому це може призвести до пам'яткового утіку
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+        GC.Collect();
+
+        // Перевірка, чи залишається leakedList у пам'яті
+        if (leakedListReference.IsAlive)
+        {
+            // Пам'ятковий утік: leakedList не звільнений
+            Assert.Fail();
+        }
+        else
+        {
+            // Успішно звільнено пам'ять, тест пройшов
+            Assert.Pass();
+        }
     }
 }
