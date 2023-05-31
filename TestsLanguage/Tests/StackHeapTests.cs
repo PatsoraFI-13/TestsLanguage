@@ -1,5 +1,3 @@
-using NUnit.Framework;
-
 public struct ExampleStruct
 {
     public int Value { get; set; }
@@ -11,15 +9,20 @@ public class StackHeapTests
     [Test]
     public void StackAllocation()
     {
-        var obj = new ExampleStruct();
-        Assert.IsFalse(obj.GetType().IsValueType == false);
+        long memoBefor = GC.GetTotalMemory(true);
+        var value = new ExampleStruct();
+        long memoAfter = GC.GetTotalMemory(true);
+        long delta = memoBefor - memoAfter; 
+        Assert.AreEqual(0, delta);
     }
 
     [Test]
     public void HeapAllocation()
     {
-        SimpleClass obj = new SimpleClass();
-        Assert.IsTrue(obj.GetType().IsValueType == false);
+        long memoBefor = GC.GetTotalMemory(true);
+        var reference = new SimpleClass();
+        long memoAfter = GC.GetTotalMemory(true);
+        long delta = memoBefor - memoAfter;
+        Assert.Greater(delta, 0);
     }
-
 }
