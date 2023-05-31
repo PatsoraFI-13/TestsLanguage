@@ -20,10 +20,10 @@ public class StackHeapTests
     [Test]
     public void HeapAllocation()
     {
-        ExampleStruct heapObj = new ExampleStruct();
+        SimpleClass heapObj = new SimpleClass();
         heapObj.Value = 10;
 
-        ExampleStruct heapObj2 = heapObj;
+        SimpleClass heapObj2 = heapObj;
         heapObj2.Value = 20;
 
         Assert.AreNotEqual(heapObj.Value, heapObj2.Value);
