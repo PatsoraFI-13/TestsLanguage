@@ -12,10 +12,6 @@ public class GarbageCollectorTests
             while (true)
             {
                 var obj = new byte[1024 * 1024]; // Виділення 1 МБ пам'яті
-
-                // Перевірка, чи відбулося очищення пам'яті
-                if (obj == null)
-                    break;
             }
         }
         catch (OutOfMemoryException)
