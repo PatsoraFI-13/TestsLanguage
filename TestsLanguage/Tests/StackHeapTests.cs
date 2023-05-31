@@ -26,6 +26,6 @@ public class StackHeapTests
         SimpleClass heapObj2 = heapObj;
         heapObj2.Value = 20;
 
-        Assert.AreNotEqual(heapObj.Value, heapObj2.Value);
+        Assert.AreEqual(heapObj.Value, heapObj2.Value);
     }
 }
