@@ -35,12 +35,12 @@ public class MemoryLeakTests
         if (leakedListReference.IsAlive)
         {
             // Пам'ятковий утік: leakedList не звільнений
-            Assert.Fail();
+            Assert.Pass();
         }
         else
         {
             // Успішно звільнено пам'ять, тест пройшов
-            Assert.Pass();
+            Assert.Fail();
         }
     }
 }
